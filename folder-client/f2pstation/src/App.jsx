@@ -17,8 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/favourites" element={<Favourites />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/topup" element={<Topup />} /> {/* Tambahkan route untuk Topup */}
-        <Route path="/" element={<Home />} />
+        <Route path="/topup" element={<Topup />} />
       </Routes>
     </BrowserRouter>
   )
