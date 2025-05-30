@@ -13,7 +13,6 @@ class FavoriteController {
         }]
       });
       
-      // Ekstrak game dari favorites
       const games = favorites.map(fav => fav.Game);
       
       res.status(200).json(games);
