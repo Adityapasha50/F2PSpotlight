@@ -37,7 +37,7 @@ function Home() {
     if (selectedGenre) {
       // Gunakan endpoint category jika genre dipilih
       setFilterStatus('loading');
-      axios.get(`http://localhost:3000/games/category/${selectedGenre}`, { params })
+      axios.get(`https://aditpasha.shop/games/category/${selectedGenre}`, { params })
         .then(response => {
           setFilteredGames(response.data.games);
           setFilterPagination(response.data.pagination);
@@ -64,7 +64,7 @@ function Home() {
       
       // Coba endpoint Gemini terlebih dahulu
       try {
-        const response = await axios.get(`http://localhost:3000/games/popular/${formattedGenre}`);
+        const response = await axios.get(`https://aditpasha.shop//games/popular/${formattedGenre}`);
         if (response.data && response.data.game) {
           setPopularGame(response.data.game);
           setPopularGameLoading(false);
@@ -76,7 +76,7 @@ function Home() {
       }
       
       // Jika Gemini gagal, gunakan endpoint alternatif
-      const fallbackResponse = await axios.get(`http://localhost:3000/games/popular-simple/${formattedGenre}`);
+      const fallbackResponse = await axios.get(`https://aditpasha.shop/games/popular-simple/${formattedGenre}`);
       if (fallbackResponse.data && fallbackResponse.data.game) {
         setPopularGame(fallbackResponse.data.game);
       } else {

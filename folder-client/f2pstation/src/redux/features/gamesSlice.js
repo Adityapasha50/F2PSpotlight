@@ -3,7 +3,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 // URL backend lokal
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://aditpasha.shop';
 
 // Axios instance
 const api = axios.create({
